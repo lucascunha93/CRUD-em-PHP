@@ -2,6 +2,8 @@
 
     class mainController {
 
+        
+
         public function index(){
 
             if (!isset($_SESSION["User"])) {
@@ -18,6 +20,10 @@
             require_once("views/security/login.php");
         }
         
+        public function cadastroUsuario(){
+            require_once ("views/clientes/cadastroUsuario.php");
+        }
+
         public function sessionOff() {
             session_destroy();
             header("Location: ../index.php");

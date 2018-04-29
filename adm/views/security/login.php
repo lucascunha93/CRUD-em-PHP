@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Rei de Copas</title>
+    <title>Faça o login para entrar</title>
     <link rel="shortcut icon" href="assets/imagens/gremio.png" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://necolas.github.io/normalize.css/3.0.1/normalize.css">

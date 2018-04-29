@@ -1,4 +1,6 @@
 <?php
+header('Content-Type: text/html; charset=utf-8');
+
 session_start();
 
     if(!isset($_GET['c'])){
@@ -13,11 +15,12 @@ session_start();
                 $user = new userController();
 
                 if (!isset($_GET['a'])) {
-                    $user -> index();
+                    print("Erro");
                 }
                 else {
                     switch ($_REQUEST['a']) {
-                        case 'cl': $user -> consultaLoginUser(); print("oi"); break;
+                        case 'cl': $user -> consultaLoginUser(); break;
+                        case 'cu': $user -> cadastrarUsuario(); break;
                     }
                 }
             break;
@@ -32,13 +35,14 @@ session_start();
                 else {
                     switch ($_REQUEST['a']) {
                         case 'i': $main -> index(); break;
+                        case 'cu': $main -> cadastroUsuario(); break;
                         case 'l': $main -> login(); break;
                         case 'off': $main -> sessionOff(); break;
                     }
                 }
             break;
 
-            case 'c': 
+            case 'c': // controller cliente
                 require_once("controllers/client.php");
                 $cliente = new clientController();
 

@@ -2,10 +2,12 @@
 
     class userController { 
 
+        function __construct() {
+            require_once ("models/userModel.php");
+        }
 
         public function consultaLoginUser(){
             $login = $_POST["email"];
-            require("models/userModel.php");
             $user = new userModel();
             $user -> consultaLogin($login);
             $resultado = $user -> getConsulta();
@@ -20,12 +22,24 @@
                     header("Location: index.php?c=m&a=i");
                  }
                  else{
-                     print("Senha incorreta");
+                     header("location: index.php?c=m&a=cu");
                  }
             }
             else {
-                print("Usuário não cadastrado");
+                header("location: index.php?c=m&a=cu");
             }
+        }
+
+        public function cadastrarUsuario(){
+
+            $arrayUsuario["nome"] = $_POST["nome"];
+            $arrayUsuario["endereco"] = $_POST["endereco"];
+            $arrayUsuario["senha"] = $_POST["senha"];
+            $arrayUsuario["telefone"] = $_POST["telefone"];
+            $arrayUsuario["email"] = $_POST["email"];
+            $usuario = new userModel();
+            $usuario -> inserirUsuario($arrayUsuario);
+            header("location: index.php?c=m&a=l");
         }
     }
 ?>

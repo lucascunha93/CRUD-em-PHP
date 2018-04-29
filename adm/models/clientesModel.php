@@ -1,8 +1,7 @@
 <?php
     class clientesModel{
 
-        public function __construct(){
-            
+        public function __construct(){   
             require_once("db/conexaoClass.php");
         }
         
