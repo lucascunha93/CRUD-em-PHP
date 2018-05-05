@@ -4,7 +4,7 @@
         <div class="form-group">
             <div>
                 <label for="id">Id</label>
-                <input type="text" class="form-control" name="id" value=" <?= $arrayClientes['idCliente'] ?> " readonly="readonly">
+                <input type="text" class="form-control" name="id" value=" <?= $arrayClientes['idCliente'] ?> "readonly="readonly">
             </div>
             <div>
                 <label for="nome">Nome</label>

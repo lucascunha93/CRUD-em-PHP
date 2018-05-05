@@ -26,7 +26,7 @@
                     <input type="text" class="form-control" name="telefone" placeholder="ex: (xx) x xxxx xxxx">
                 </div>
             <div class="col-md-12 text-right">
-                <button type="submit" class="btn btn-primary ">Cadastrar</button>
+                <button type="submit" class="btn btn-primary btnMargin">Cadastrar</button>
             </div>
         </form>
     </div>

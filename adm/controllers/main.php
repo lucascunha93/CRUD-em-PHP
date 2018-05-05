@@ -21,7 +21,9 @@
         }
         
         public function cadastroUsuario(){
+            require_once ("views/header.php");
             require_once ("views/clientes/cadastroUsuario.php");
+            require_once ("views/footer.php");
         }
 
         public function sessionOff() {

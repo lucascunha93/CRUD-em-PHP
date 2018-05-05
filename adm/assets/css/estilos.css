@@ -296,6 +296,10 @@ a.btn-top:hover
     transition:box-shadow 0.5s; 
 }
 
+.btnMargin {
+    margin-bottom: 10px;
+}
+
 /* ------------ Fim Botões ---------------*/
 
 /* ------------ Tipografia ---------------*/
