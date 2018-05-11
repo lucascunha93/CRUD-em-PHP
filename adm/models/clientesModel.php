@@ -31,7 +31,8 @@
             $conn = $Oconn -> getconn();
             $sql = "INSERT INTO clientes (nome, email, endereco, telefone) VALUES ('".$arrayClientes['nome']."', '".$arrayClientes['email']."', 
                 '".$arrayClientes['endereco']."', '".$arrayClientes['telefone']."');";
-            $this -> resultado = $conn -> query($sql);
+            $conn -> query($sql);
+            $this -> resultado = $conn -> insert_id;
         }
 
         public function atualizarCliente($arrayClientes) {

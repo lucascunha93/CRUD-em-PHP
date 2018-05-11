@@ -3,7 +3,7 @@
 <div class="container col-md-6 col-md-offset-3 conteudo">
     <h1>Cadastro de Cliente </h1>
     <div class="cad">
-        <form action="?c=c&a=ic" method="POST">
+        <form action="?c=c&a=ic" method="POST" enctype="multipart/form-data">
             <div class="form-row">
                 <div class="form-group col-md-12">
                     <label for="inputNome">Nome:</label>
@@ -20,6 +20,9 @@
                 <div class="form-group col-md-4">
                     <label for="inputCity">Telefone:</label>
                     <input type="text" class="form-control" name="telefone" placeholder="ex: (xx) x xxxx xxxx">
+                </div>
+                <div class="form-group col-md-4">
+                    Arquivo: <input type="file" name="foto"><br>
                 </div>
             <div class="col-md-12 text-right">
                 <button type="submit" class="btn btn-primary ">Cadastrar</button>
